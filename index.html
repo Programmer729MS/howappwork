@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HowAppWork</title>
+    <link rel="website icon" href="./images/logo.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<style>
+
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.holder.fade-out {
+    top: 110%;
+    opacity: 0;
+}
+
+.holder img {
+    width: 15rem;
+}
+
+.nav{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background-color: indigo;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.nav li a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    background-color: indigo;
+    padding: 0.2rem 0.2rem;
+    position: fixed;
+    top: 0;
+}
+
+.header{
+    width: 90%;
+    margin: auto;
+    padding: 0.5rem 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: white; */
+}
+
+.img img {
+    width: 80px;
+    height: 80px;
+}
+
+
+.text{
+    background: linear-gradient(to right, rgb(253, 0, 0), rgb(255, 255, 255), #f9ed06);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s linear infinite;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+@keyframes gradient {
+    0%{background-position: 0% 75%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 70%;}
+}
+
+.container{
+    width: 100%;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.box{
+    width: 90%;
+    border: 1px solid indigo;
+    text-align: center;
+    padding: 2rem;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.box a{
+    text-decoration: none;
+    transition: 0.2s;
+}
+.box a:hover{
+   color: red;
+}
+
+@media (max-width:600px) {
+    
+    .img img {
+        border-radius: 10px;
+    }
+
+    .text {
+        font-size: 1.3rem;
+    }
+}
+
+
+</style>
+<body>
+
+    <header>
+        <div class="header">
+            <div class="img" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"><img src="./images/logo.png" alt=""></div>
+            <div class="text">Zaidu Bn Sabit Islamiyya 2024 PhotoAlbum</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="box"><a href="./images/aji.html">SSS 1A</a></div>
+        <div class="box"><a href="">SSS 3B</a></div>
+        <div class="box"><a href="">SSS 3C</a></div>
+    </div>
+
+
+    <div class="holder">
+       <img src="./images/logo.png" alt="">
+    </div>
+
+
+    <div class="nav">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/images/teachers.html">Teacher's</a></li>
+        <li><a href="/images/images.html">Image's</a></li>
+        <li><a href="/images/contact.html">Contact</a></li>
+    </div>
+
+    <script>
+        function load () {
+                    document.querySelector('.holder').classList.add('fade-out')
+        }
+
+        function fadeOut() {
+                            setInterval((load), 3000);
+        }
+
+        window.onload = fadeOut;
+
+        AOS.init();
+    </script>
+</body>
+</html>

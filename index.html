@@ -62,15 +62,18 @@
 header{
     width: 100%;
     background-color: indigo;
-    padding: 0.2rem 0.2rem;
+    padding: 0.1rem 0.1rem;
     position: fixed;
     top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .header{
     width: 90%;
+     
     margin: auto;
-    padding: 0.5rem 0.3rem;
+    padding: 0.3rem 0.3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,9 +92,11 @@ header{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradient 3s linear infinite;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.7rem;
+    font-weight: 700;
+    
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 @keyframes gradient {
@@ -123,9 +128,38 @@ header{
 .box a{
     text-decoration: none;
     transition: 0.2s;
+     color: purple;
 }
 .box a:hover{
    color: red;
+}
+
+.links{
+    background: #fff;
+    /* border-radius: 10px; */
+    color: purple;
+    width: 100%;
+    margin: auto;
+    padding: 0.5rem 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+ 
+
+.link a{
+   text-decoration: none;
+   transition: .3s;
+   text-align: center;
+     color: purple;
+     font-weight: 600;
+}
+.link a:hover{
+   color: red;
+   border-bottom: 1px solid red;
 }
 
 @media (max-width:600px) {
@@ -135,7 +169,12 @@ header{
     }
 
     .text {
-        font-size: 1.3rem;
+        font-size: 1.7rem;
+    }
+
+    .box{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -145,29 +184,34 @@ header{
 
     <header>
         <div class="header">
-            <div class="img"><img src="./images/logo.png"></div>
-            <div class="text">Zaidu Bn Sabit Islamiyya 2024 PhotoAlbum</div>
+            <div class="img"><img src="./images/logo.jpg"></div>
+            <div class="text"> مدرسة حبيب الدين الإسلامية ثرنث  </div>
+        </div>
+        <div class="links">
+            <div class="link"><a href="./public/calendar.html">Calender</a></div>|
+            <div class="link"><a href="./public/apkfile.html">ApkFile</a></div>|
+            <div class="link"><a href="./public/about.html">About School</a></div>
         </div>
     </header>
 
     <div class="container">
-        <div class="box"><a href="./aji.html">SSS 3A</a></div>
-        <div class="box"><a href="./aji.html">SSS 3B</a></div>
-        <div class="box"><a href="./aji.html">SSS 3C</a></div>
+        <div class="box"><a href="./public/aji.html">AJIN MALAM</a></div>
+        <div class="box"><a href="./public/aji.html">AJIN MALAM</a></div>
+
          
     </div>
 
 
     <div class="holder">
-       <img src="./images/logo.png" alt="">
+       <img src="./images/logo.jpg" alt="">
     </div>
 
 
     <div class="nav">
         <li><a href="./index.html">Home</a></li>
-        <li><a href="./teachers.html">Teacher's</a></li>
-        <li><a href="./images.html">Image's</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./public/teachers.html">Teacher's</a></li>
+        <li><a href="./public/images.html">Image's</a></li>
+        <li><a href="./public/contact.html">Contact</a></li>
     </div>
 
     <script>
